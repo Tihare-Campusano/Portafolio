@@ -1,0 +1,67 @@
+/* Reemplazar el fondo oscuro por #102542 */
+.bg-dark {
+    background-color: #102542 !important;
+}
+
+/* Cambiar los textos primarios (azul fuerte de Bootstrap) por #f87060 */
+.text-primary {
+    color: #f87060 !important;
+}
+
+.btn-primary {
+    background-color: #f87060 !important;
+    border-color: #f87060 !important;
+}
+
+.btn-primary:hover {
+    background-color: #e05a4f !important;
+    border-color: #e05a4f !important;
+}
+
+/* Cambiar los elementos de info (celeste) por un tono más claro de #f87060 */
+.text-info {
+    color: #fba39a !important;
+}
+
+.btn-outline-info {
+    color: #fba39a !important;
+    border-color: #fba39a !important;
+}
+
+.btn-outline-info:hover {
+    background-color: #fba39a !important;
+    color: #102542 !important;
+}
+
+/* Solo íconos sociales cambian de color al pasar el cursor */
+.social-icons a.text-white:hover i {
+    color: #f87060 !important;
+}
+
+/* Órbita */
+.orbita {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: girar 12s linear infinite;
+    z-index: 0;
+}
+
+.orb-icon {
+    position: absolute;
+    font-size: 24px;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes girar {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Extra: color púrpura para ícono Bootstrap */
+.text-purple {
+    color: #7952b3;
+}

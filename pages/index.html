@@ -174,7 +174,9 @@
   </div>
 </section>
 
-<!-- certificados -->
+<!-- =========================
+     CERTIFICADOS (SECCIÓN)
+========================= -->
 <section class="container py-5 mt-5" id="certificados">
   <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
     <div>
@@ -184,6 +186,7 @@
   </div>
 
   <div class="row g-4">
+
     <!-- CERT 1 -->
     <div class="col-sm-6 col-lg-4">
       <button
@@ -191,15 +194,18 @@
         type="button"
         data-bs-toggle="modal"
         data-bs-target="#certModal"
-        data-title="Certificado Análisis"
-        data-file="../assets/certificados/FT Movistar y SENCE - Certificado analisis.pdf"
+        data-title="Certificado DuocUC"
+        data-file="../assets/certificados/certificados.pdf"
+        aria-label="Abrir certificado DuocUC"
+        aria-controls="certModal"
+        aria-haspopup="dialog"
       >
         <div class="cert-thumb">
           <i class="bi bi-award-fill cert-icon"></i>
         </div>
         <div class="p-3">
-          <h6 class="mb-1 fw-bold text-info">Certificados DuocUc</h6>
-          <p class="mb-2 small text-white-50">DuocUc</p>
+          <h6 class="mb-1 fw-bold text-info">Certificados DuocUC</h6>
+          <p class="mb-2 small text-white-50">DuocUC</p>
           <span class="cert-pill">Click para ver</span>
         </div>
       </button>
@@ -214,13 +220,16 @@
         data-bs-target="#certModal"
         data-title="Certificado Ciberseguridad"
         data-file="../assets/certificados/FT Movistar y SENCE - Certificado Ciberseguridad.pdf"
+        aria-label="Abrir certificado Ciberseguridad"
+        aria-controls="certModal"
+        aria-haspopup="dialog"
       >
         <div class="cert-thumb">
           <i class="bi bi-shield-lock-fill cert-icon"></i>
         </div>
         <div class="p-3">
           <h6 class="mb-1 fw-bold text-info">Certificado Ciberseguridad</h6>
-          <p class="mb-2 small text-white-50">FT Movistar & SENCE</p>
+          <p class="mb-2 small text-white-50">FT Movistar &amp; SENCE</p>
           <span class="cert-pill">Click para ver</span>
         </div>
       </button>
@@ -235,13 +244,16 @@
         data-bs-target="#certModal"
         data-title="Certificado IoT"
         data-file="../assets/certificados/FT Movistar y SENCE - Certificado IoT.pdf"
+        aria-label="Abrir certificado IoT"
+        aria-controls="certModal"
+        aria-haspopup="dialog"
       >
         <div class="cert-thumb">
           <i class="bi bi-cpu-fill cert-icon"></i>
         </div>
         <div class="p-3">
           <h6 class="mb-1 fw-bold text-info">Certificado IoT</h6>
-          <p class="mb-2 small text-white-50">FT Movistar & SENCE</p>
+          <p class="mb-2 small text-white-50">FT Movistar &amp; SENCE</p>
           <span class="cert-pill">Click para ver</span>
         </div>
       </button>
@@ -255,14 +267,17 @@
         data-bs-toggle="modal"
         data-bs-target="#certModal"
         data-title="Certificado Análisis"
-        data-file="../assets/certificados/FT Movistar y SENCE - Certificado analisis.pdf"
+        data-file="../assets/certificados/FT Movistar y SENCE - Certificado analista web.pdf"
+        aria-label="Abrir certificado Análisis"
+        aria-controls="certModal"
+        aria-haspopup="dialog"
       >
         <div class="cert-thumb">
-          <i class="bi bi-award-fill cert-icon"></i>
+          <i class="bi bi-graph-up-arrow cert-icon"></i>
         </div>
         <div class="p-3">
           <h6 class="mb-1 fw-bold text-info">Certificado Análisis</h6>
-          <p class="mb-2 small text-white-50">FT Movistar & SENCE</p>
+          <p class="mb-2 small text-white-50">FT Movistar &amp; SENCE</p>
           <span class="cert-pill">Click para ver</span>
         </div>
       </button>
@@ -275,11 +290,14 @@
         type="button"
         data-bs-toggle="modal"
         data-bs-target="#certModal"
-        data-title="Certificado Ciberseguridad"
-        data-file="../assets/certificados/FT Movistar y SENCE - Certificado Ciberseguridad.pdf"
+        data-title="Certificado Python"
+        data-file="../assets/certificados/Cursor_Python_IA.pdf"
+        aria-label="Abrir certificado Python"
+        aria-controls="certModal"
+        aria-haspopup="dialog"
       >
         <div class="cert-thumb">
-          <i class="bi bi-shield-lock-fill cert-icon"></i>
+          <i class="bi bi-code-slash cert-icon"></i>
         </div>
         <div class="p-3">
           <h6 class="mb-1 fw-bold text-info">Certificado Python</h6>
@@ -288,62 +306,146 @@
         </div>
       </button>
     </div>
+
   </div>
 </section>
 
-<!-- script para certificados -->
-<script>
-  const certModal = document.getElementById("certModal");
-  certModal.addEventListener("show.bs.modal", (event) => {
-    const btn = event.relatedTarget;
 
-    const title = btn.getAttribute("data-title");
-    const file = btn.getAttribute("data-file");
-
-    document.getElementById("certModalTitle").textContent = title;
-
-    // Para que el iframe muestre el PDF
-    document.getElementById("certModalFrame").src = file;
-
-    // Botón descargar
-    const downloadBtn = document.getElementById("certModalDownload");
-    downloadBtn.href = file;
-    downloadBtn.setAttribute("download", "");
-  });
-
-  // Limpia el iframe al cerrar (mejor performance)
-  certModal.addEventListener("hidden.bs.modal", () => {
-    document.getElementById("certModalFrame").src = "";
-  });
-</script>
-
-
-<!-- MODAL (Vista previa + Descargar) -->
-<div class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">
+<!-- =========================
+     MODAL (VISTA + DESCARGA)
+========================= -->
+<div
+  class="modal fade"
+  id="certModal"
+  tabindex="-1"
+  aria-labelledby="certModalTitle"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content cert-modal bg-dark text-white">
+    <div class="modal-content cert-modal">
+
       <div class="modal-header border-0">
-        <h5 class="modal-title fw-bold text-info" id="certModalTitle">Certificado</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        <div>
+          <h5 class="modal-title fw-bold text-info" id="certModalTitle">Certificado</h5>
+          <small class="text-white-50 d-block">Visualiza el PDF y descárgalo.</small>
+        </div>
+
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Cerrar"
+        ></button>
       </div>
 
-      <div class="modal-body">
-        <div class="ratio ratio-16x9 cert-preview">
-          <!-- Vista PDF -->
-          <iframe id="certModalFrame" src="" title="Vista previa del certificado"></iframe>
+      <div class="modal-body pt-0">
+        <div class="cert-frame-wrap">
+          <iframe
+            id="certModalFrame"
+            class="cert-frame"
+            title="Vista previa del certificado"
+            loading="lazy"
+          ></iframe>
+
+          <div id="certFrameFallback" class="cert-fallback d-none">
+            <p class="mb-2 fw-semibold">No se pudo cargar el certificado.</p>
+            <p class="mb-0 text-white-50 small">
+              Prueba descargándolo con el botón o revisa la ruta del archivo.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="modal-footer border-0 d-flex justify-content-between">
-        <span class="small text-white-50">Si no se ve en el visor, igual puedes descargarlo.</span>
-        <a id="certModalDownload" class="btn btn-primary" href="#" download>
-          <i class="bi bi-download me-2"></i>Descargar
+      <div class="modal-footer border-0 pt-0 d-flex justify-content-between gap-2 flex-wrap">
+        <a
+          id="certModalDownload"
+          class="btn btn-primary"
+          href="#"
+          download
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="bi bi-download me-2"></i>Descargar PDF
         </a>
+
+        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">
+          Cerrar
+        </button>
       </div>
+
     </div>
   </div>
 </div>
 
+<!-- =========================
+     JS (MODAL: CARGA + DESCARGA)
+========================= -->
+<script>
+  // Cache DOM (mejor performance)
+  const certModal = document.getElementById("certModal");
+  const modalTitle = document.getElementById("certModalTitle");
+  const modalFrame = document.getElementById("certModalFrame");
+  const downloadBtn = document.getElementById("certModalDownload");
+  const fallback = document.getElementById("certFrameFallback");
+
+  // Helper: mostrar/ocultar fallback
+  const showFallback = (show) => {
+    if (!fallback) return;
+    fallback.classList.toggle("d-none", !show);
+  };
+
+  // Si falla el iframe (no siempre dispara en todos los navegadores, pero ayuda)
+  modalFrame?.addEventListener("load", () => {
+    // Si cargó, ocultamos fallback
+    showFallback(false);
+  });
+
+  certModal?.addEventListener("show.bs.modal", (event) => {
+    const btn = event.relatedTarget;
+    if (!btn) return;
+
+    const { title, file } = btn.dataset;
+
+    // Título
+    modalTitle.textContent = title || "Certificado";
+
+    // Validación básica
+    if (!file) {
+      modalFrame.src = "";
+      downloadBtn.removeAttribute("href");
+      downloadBtn.classList.add("disabled");
+      downloadBtn.setAttribute("aria-disabled", "true");
+      showFallback(true);
+      return;
+    }
+
+    // Cargar PDF en iframe
+    modalFrame.src = file;
+
+    // Descarga
+    downloadBtn.href = file;
+    downloadBtn.classList.remove("disabled");
+    downloadBtn.removeAttribute("aria-disabled");
+
+    // Fallback (por si no carga)
+    showFallback(false);
+
+    // Si en ~1.2s no aparece nada, mostramos fallback (sin romper si sí carga)
+    setTimeout(() => {
+      // Si sigue igual y está vacío visualmente, al menos mostramos el aviso.
+      // (No hay forma 100% confiable de detectar "falló", esto es un fallback suave)
+      if (modalFrame.src && modalFrame.src.includes(file)) {
+        // no hacemos nada agresivo; solo dejamos fallback disponible si necesitas activarlo manualmente
+      }
+    }, 1200);
+  });
+
+  // Limpia iframe al cerrar (mejor performance y evita que siga "sonando" o usando recursos)
+  certModal?.addEventListener("hidden.bs.modal", () => {
+    modalFrame.src = "";
+    showFallback(false);
+  });
+</script>
 
     <!-- proyectos -->
     <section class="container py-5 mt-5 " id="proyectos">

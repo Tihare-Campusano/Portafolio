@@ -3,6 +3,14 @@
     background-color: #102542 !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 40px;
+}
+
 /* Cambiar los textos primarios (azul fuerte de Bootstrap) por #f87060 */
 .text-primary {
     color: #f87060 !important;

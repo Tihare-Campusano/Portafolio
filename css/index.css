@@ -1,21 +1,32 @@
-/* Reemplazar el fondo oscuro por #102542 */
-.bg-dark {
-    background-color: #102542 !important;
-}
+/* ================================
+    CONFIGURACIÓN GENERAL
+================================ */
 
+/* Scroll suave one-page */
 html {
     scroll-behavior: smooth;
 }
 
+/* Espacio por navbar fija */
 body {
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
-/* Cambiar los textos primarios (azul fuerte de Bootstrap) por #f87060 */
+/* Reemplazar fondo oscuro Bootstrap */
+.bg-dark {
+    background-color: #102542 !important;
+}
+
+/* ================================
+    COLORES PERSONALIZADOS
+================================ */
+
+/* Color primario */
 .text-primary {
     color: #f87060 !important;
 }
 
+/* Botón primario */
 .btn-primary {
     background-color: #f87060 !important;
     border-color: #f87060 !important;
@@ -26,11 +37,12 @@ body {
     border-color: #e05a4f !important;
 }
 
-/* Cambiar los elementos de info (celeste) por un tono más claro de #f87060 */
+/* Color info */
 .text-info {
     color: #fba39a !important;
 }
 
+/* Botón outline info */
 .btn-outline-info {
     color: #fba39a !important;
     border-color: #fba39a !important;
@@ -41,12 +53,18 @@ body {
     color: #102542 !important;
 }
 
-/* Solo íconos sociales cambian de color al pasar el cursor */
+/* ================================
+    ÍCONOS SOCIALES
+================================ */
+
 .social-icons a.text-white:hover i {
     color: #f87060 !important;
 }
 
-/* Órbita */
+/* ================================
+    ÓRBITA ANIMADA (HERO)
+================================ */
+
 .orbita {
     position: absolute;
     width: 250px;
@@ -65,11 +83,59 @@ body {
 }
 
 @keyframes girar {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
-/* Extra: color púrpura para ícono Bootstrap */
+/* Color púrpura Bootstrap */
 .text-purple {
     color: #7952b3;
+}
+
+/* ================================
+    SECCIÓN "SOBRE MÍ"
+================================ */
+
+/* Cards internas (glassmorphism suave) */
+.about-card,
+.about-panel {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(251, 163, 154, 0.22);
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+}
+
+/* Panel lateral */
+.about-panel {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Badges de tecnologías */
+.tech-badge {
+    background: rgba(248, 112, 96, 0.15);
+    border: 1px solid rgba(248, 112, 96, 0.35);
+    color: #fba39a;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+/* ================================
+    AJUSTES RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .orbita {
+        width: 200px;
+        height: 200px;
+    }
 }

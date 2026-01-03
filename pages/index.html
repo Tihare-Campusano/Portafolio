@@ -176,7 +176,7 @@
 </section>
 
 <!-- =========================
-     CERTIFICADOS (SECCIÓN)
+      CERTIFICADOS (SECCIÓN)
 ========================= -->
 <section class="container py-5 mt-5" id="certificados">
   <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
@@ -311,9 +311,8 @@
   </div>
 </section>
 
-
 <!-- =========================
-     MODAL (VISTA + DESCARGA)
+      MODAL (VISTA + DESCARGA)
 ========================= -->
 <div
   class="modal fade"
@@ -379,7 +378,7 @@
 </div>
 
 <!-- =========================
-     JS (MODAL: CARGA + DESCARGA)
+      JS (MODAL: CARGA + DESCARGA)
 ========================= -->
 <script>
   // Cache DOM (mejor performance)
@@ -448,42 +447,181 @@
   });
 </script>
 
-    <!-- proyectos -->
-    <section class="container py-5 mt-5 " id="proyectos">
-    <h2 class="fw-bold text-primary text-center mb-5">Proyectos</h2>
 
-    <div class="row g-4">
-        <!-- Proyecto 1 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card bg-dark border-info h-100">
-                <div class="card-body">
-                    <h5 class="card-title text-info">NEXA</h5>
-                    <p class="card-text">
-                        Sistema de gestión logística con app móvil, backend en FastAPI
-                        y clasificación de imágenes con IA.
-                    </p>
-                    <p class="small text-muted">Ionic · React · Supabase · Python · IA</p>
-                    <a href="#" class="btn btn-outline-info btn-sm">Ver proyecto</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Proyecto 2 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card bg-dark border-info h-100">
-                <div class="card-body">
-                    <h5 class="card-title text-info">Portafolio Web</h5>
-                    <p class="card-text">
-                        Portafolio personal responsive con Bootstrap,
-                        animaciones CSS y diseño one-page.
-                    </p>
-                    <p class="small text-muted">HTML · CSS · Bootstrap</p>
-                    <a href="#" class="btn btn-outline-info btn-sm">GitHub</a>
-                </div>
-            </div>
-        </div>
+    <!-- PROYECTOS -->
+<!-- PROYECTOS -->
+<section class="container py-5 mt-5" id="proyectos">
+  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+    <div>
+      <h2 class="fw-bold text-primary mb-1">Proyectos</h2>
+      <p class="text-white-50 mb-0">Videos en reproducción automática. Haz clic para ver detalles y código.</p>
     </div>
-    </section>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- PROYECTO 1 -->
+    <div class="col-sm-6 col-lg-4">
+      <button
+        class="project-card w-100 text-start"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#projectModal"
+        data-title="NEXA"
+        data-subtitle="Ionic · React · Supabase · FastAPI · IA"
+        data-desc="Sistema de gestión logística con app móvil, backend en FastAPI y clasificación de imágenes con IA."
+        data-repo="https://github.com/Tihare-Campusano/NEXA"
+        data-demo=""
+        data-snippet="FastAPI · Endpoint ejemplo\n\n@router.post('/predict')\nasync def predict(file: UploadFile = File(...)):\n    image = await file.read()\n    result = model.predict(image)\n    return {'label': result.label, 'confidence': result.score}\n"
+        aria-label="Abrir detalles del proyecto NEXA"
+      >
+        <div class="project-media">
+          <!-- VIDEO autoplay (cambia VIDEO_ID) -->
+          <iframe
+            class="project-video"
+            src="https://www.youtube.com/embed/vjfIWxkFLs4?autoplay=1&mute=1&loop=1&playlist=vjfIWxkFLs4&controls=0&modestbranding=1&rel=0&playsinline=1"
+            title="Video NEXA"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+
+          <div class="project-overlay">
+            <i class="bi bi-github project-overlay-icon"></i>
+            <span class="project-overlay-text">Ver detalles</span>
+          </div>
+        </div>
+
+        <div class="p-3">
+          <h6 class="mb-1 fw-bold text-info">NEXA</h6>
+          <p class="mb-2 small text-white-50">Gestión logística + IA</p>
+          <span class="project-pill">Abrir showcase</span>
+        </div>
+      </button>
+    </div>
+
+    <!-- PROYECTO 2 -->
+    <div class="col-sm-6 col-lg-4">
+      <button
+        class="project-card w-100 text-start"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#projectModal"
+        data-title="Portafolio Web"
+        data-subtitle="HTML · CSS · Bootstrap"
+        data-desc="Portafolio personal responsive con diseño one-page y animaciones CSS."
+        data-repo="https://github.com/TU_USUARIO/TU_REPO_PORTAFOLIO"
+        data-demo="https://tusitio.cl"
+        data-snippet="HTML · Sección certificados (idea)\n\n<section id='certificados'>\n  <button class='cert-card' data-bs-toggle='modal'>...\n</section>\n"
+        aria-label="Abrir detalles del proyecto Portafolio Web"
+      >
+        <div class="project-media">
+          <!-- VIDEO autoplay (cambia VIDEO_ID) -->
+          <iframe
+            class="project-video"
+            src="https://www.youtube.com/embed/VIDEO_ID_PORTAFOLIO?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID_PORTAFOLIO&controls=0&modestbranding=1&rel=0&playsinline=1"
+            title="Video Portafolio Web"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+
+          <div class="project-overlay">
+            <i class="bi bi-github project-overlay-icon"></i>
+            <span class="project-overlay-text">Ver repositorio</span>
+          </div>
+        </div>
+
+        <div class="p-3">
+          <h6 class="mb-1 fw-bold text-info">Portafolio Web</h6>
+          <p class="mb-2 small text-white-50">One-page responsive</p>
+          <span class="project-pill">Abrir showcase</span>
+        </div>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL PROYECTOS (VIDEO) / MODAL PROYECTOS (SHOWCASE) -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered project-modal-xl">
+    <div class="modal-content project-modal">
+
+      <div class="modal-header border-0">
+        <div>
+          <h5 class="modal-title fw-bold text-info" id="projectModalTitle">Proyecto</h5>
+          <small id="projectModalSubtitle" class="text-white-50 d-block">Tecnologías</small>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body pt-0">
+        <p id="projectModalDesc" class="text-white-50 mb-3 px-4"></p>
+
+        <!-- “Vista tipo código” -->
+        <div class="px-4 pb-4">
+          <div class="code-card">
+            <div class="code-card-top">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-title">Preview del código</span>
+            </div>
+            <pre class="code-pre"><code id="projectModalCode"></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer border-0 pt-0 d-flex justify-content-between gap-2 flex-wrap px-4 pb-4">
+        <div class="d-flex gap-2 flex-wrap">
+          <a id="projectModalRepo" class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            <i class="bi bi-github me-2"></i>Ver repositorio
+          </a>
+          <a id="projectModalDemo" class="btn btn-outline-info d-none" href="#" target="_blank" rel="noopener">
+            <i class="bi bi-box-arrow-up-right me-2"></i>Ver demo
+          </a>
+        </div>
+
+        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- JS MODAL PROYECTOS -->
+<script>
+  const projectModal = document.getElementById("projectModal");
+  const titleEl = document.getElementById("projectModalTitle");
+  const subtitleEl = document.getElementById("projectModalSubtitle");
+  const descEl = document.getElementById("projectModalDesc");
+  const codeEl = document.getElementById("projectModalCode");
+  const repoEl = document.getElementById("projectModalRepo");
+  const demoEl = document.getElementById("projectModalDemo");
+
+  projectModal?.addEventListener("show.bs.modal", (event) => {
+    const btn = event.relatedTarget;
+    if (!btn) return;
+
+    const { title, subtitle, desc, repo, demo, snippet } = btn.dataset;
+
+    titleEl.textContent = title || "Proyecto";
+    subtitleEl.textContent = subtitle || "";
+    descEl.textContent = desc || "";
+    codeEl.textContent = snippet || "// Agrega aquí una vista previa del código";
+
+    // Repo obligatorio
+    repoEl.href = repo || "#";
+
+    // Demo opcional
+    if (demo && demo.trim() !== "") {
+      demoEl.href = demo;
+      demoEl.classList.remove("d-none");
+    } else {
+      demoEl.href = "#";
+      demoEl.classList.add("d-none");
+    }
+  });
+</script>
+
 
     <!-- Contacto -->
     <section class="container py-5 mt-5" id="contacto">

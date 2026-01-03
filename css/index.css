@@ -125,7 +125,7 @@ body {
     font-size: 0.85rem;
 }
 /* ================================
-   CERTIFICADOS
+    CERTIFICADOS
 ================================ */
 
 /* CARD */
@@ -202,7 +202,7 @@ body {
 }
 
 /* ================================
-   MODAL CERTIFICADOS
+    MODAL CERTIFICADOS
 ================================ */
 
 .cert-modal {
@@ -281,6 +281,161 @@ body {
   .cert-frame {
     width: 100vw;
   }
+}
+
+/* ================================
+    PROYECTOS (CARD VIDEO + SHOWCASE MODAL)
+================================ */
+
+.project-card{
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(248,112,96,0.25);
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.project-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,.40);
+  border-color: rgba(248,112,96,0.45);
+}
+
+.project-card:focus-visible{
+  outline: 3px solid rgba(248,112,96,.55);
+  outline-offset: 4px;
+}
+
+/* VIDEO area */
+.project-media{
+  position: relative;
+  height: 180px;
+  background: rgba(0,0,0,.25);
+}
+
+.project-video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none; /* IMPORTANTÍSIMO: para que el click abra modal, no interactúe con YouTube */
+  filter: saturate(1.1) contrast(1.05);
+}
+
+/* overlay bonito */
+.project-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.65));
+}
+
+.project-overlay-icon{
+  font-size: 22px;
+  color: rgba(255,255,255,.85);
+}
+
+.project-overlay-text{
+  font-size: .85rem;
+  color: rgba(255,255,255,.85);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.25);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* pill */
+.project-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .8rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(248,112,96,0.14);
+  border: 1px solid rgba(248,112,96,0.30);
+  color: rgba(255,255,255,.80);
+  font-weight: 600;
+}
+
+/* ================================
+    MODAL SHOWCASE
+================================ */
+
+.project-modal{
+  border-radius: 18px;
+  background: rgba(16,37,66,0.92);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 30px 70px rgba(0,0,0,.55);
+}
+
+.project-modal-xl{
+  max-width: 96vw;
+  width: 96vw;
+}
+
+#projectModal.modal.show .modal-dialog{
+  transform: scale(1.01);
+  transition: transform 180ms ease;
+}
+
+/* Code viewer tipo editor */
+.code-card{
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0,0,0,.22);
+}
+
+.code-card-top{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  background: rgba(0,0,0,.18);
+}
+
+.dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+.dot.red{ background: #ff5f57; }
+.dot.yellow{ background: #febc2e; }
+.dot.green{ background: #28c840; }
+
+.code-title{
+  margin-left: 8px;
+  font-size: .85rem;
+  color: rgba(255,255,255,.75);
+}
+
+.code-pre{
+  margin: 0;
+  padding: 14px 14px 18px;
+  max-height: 52vh;
+  overflow: auto;
+  color: rgba(255,255,255,.85);
+  font-size: .9rem;
+  line-height: 1.35;
+}
+
+/* mobile */
+@media (max-width: 576px){
+  .project-media{ height: 160px; }
+  .project-modal{ border-radius: 0; }
 }
 
 /* ================================

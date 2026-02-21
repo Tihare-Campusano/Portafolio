@@ -64,31 +64,102 @@ body {
 /* ================================
     ÓRBITA ANIMADA (HERO)
 ================================ */
+/* =========================
+   HERO SECTION
+========================= */
 
-.orbita {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: girar 12s linear infinite;
-    z-index: 0;
+.hero-section {
+  padding-top: 120px;   /* espacio real bajo navbar */
+  padding-bottom: 60px;
 }
 
-.orb-icon {
-    position: absolute;
-    font-size: 24px;
-    transform: translate(-50%, -50%);
+/* Solo en desktop ocupa pantalla completa */
+@media (min-width: 992px) {
+  .hero-row {
+    min-height: 100vh;
+  }
 }
 
-@keyframes girar {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+/* En móvil quitamos altura forzada */
+@media (max-width: 991px) {
+  .hero-row {
+    min-height: auto;
+  }
+}
+
+/* =========================
+   IMAGEN
+========================= */
+
+.hero-img-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Glow suave detrás */
+.hero-img-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255,107,107,0.25) 0%, transparent 70%);
+  filter: blur(35px);
+  z-index: 0;
+}
+
+/* Imagen principal */
+.hero-img {
+  position: relative;
+  width: 100%;
+  max-width: 380px;   /* tamaño desktop */
+  height: auto;
+  border-radius: 28px;
+  z-index: 2;
+  box-shadow:
+    0 35px 70px rgba(0,0,0,0.45),
+    0 0 60px rgba(255,107,107,0.25);
+  transition: 0.4s ease;
+}
+
+/* Hover elegante */
+.hero-img:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet */
+@media (max-width: 991px) {
+  #inicio {
+    flex-direction: column-reverse;
+  }
+  .hero-img {
+    max-width: 340px;
+    margin-top: 40px;
+  }
+}
+
+/* Celular */
+@media (max-width: 576px) {
+  #inicio {
+    flex-direction: column-reverse;
+  }
+
+  .hero-img {
+    max-width: 300px;
+    margin-top: 30px;
+  }
+}
+
+/* Evita márgenes raros en títulos */
+.hero-section h1,
+.hero-section h5 {
+  margin-top: 0;
 }
 
 /* Color púrpura Bootstrap */

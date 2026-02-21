@@ -11,7 +11,7 @@
 
 <body class="bg-dark text-white">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
         <a class="navbar-brand fw-bold text-info" href="#">DevTihare</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,9 @@
         <div class="col-lg-6 mt-5">
             <h4 class="text-info">Hello World, Soy Tihare</h4>
             <h1 class="fw-bold">Ingeniera en <span class="text-primary">Informática</span></h1>
-            <p>Impulsada por la pasión de transformar ideas en soluciones digitales innovadoras, funcionales y memorables que mejoran la vida de las personas.</p>
+            <p>Especializada en desarrollo Full Stack (Web y Móvil), Cloud e Inteligencia Artificial.
+              Construyo soluciones escalables, seguras y centradas en el usuario, integrando frontend,
+              backend y modelos de IA en entornos reales.</p>
             <div class="d-flex gap-3 mt-5">
                 <a href="../assets/certificados/titulo.pdf" class="btn btn-primary">Descargar certificado de título</a>
                 <a href="#contacto" class="btn btn-outline-info">Contáctame</a>
@@ -54,18 +56,19 @@
                 <a href="https://www.youtube.com/@not_kido0_dev" class="text-white" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-youtube"></i>
                 </a>
+                <a href="https://mail.google.com/mail/?view=cm&to=tb.campusano2@gmail.com" class="text-white" target="_blank"> 
+                    <i class="bi bi-envelope-fill"></i>
+                </a>
             </div>
         </div>
 
         <!-- Imagen y Orbitas con íconos de Bootstrap -->
-        <div class="col-lg-6 mt-5 mt-lg-0 position-relative text-center">
-            <img src="tu-foto.png" alt="Foto de perfil" class="rounded-circle border border-info" width="180">
-            <div class="orbita">
-                <i class="bi bi-braces orb-icon text-warning" style="top: 0; left: 50%;" title="JavaScript"></i>
-                <i class="bi bi-filetype-html orb-icon text-danger" style="top: 50%; left: 100%;" title="HTML5"></i>
-                <i class="bi bi-filetype-css orb-icon text-primary" style="bottom: 0; left: 50%;" title="CSS3"></i>
-                <i class="bi bi-bootstrap orb-icon text-purple" style="top: 50%; left: 0%;" title="Bootstrap"></i>
-            </div>
+        <div class="col-lg-6 d-flex justify-content-center align-items-center order-2 order-lg-2">
+          <div class="hero-img-wrapper">
+            <img src="../assets/fotos/foto_cv_2.png" 
+                alt="Foto de perfil" 
+                class="hero-img img-fluid">
+          </div>
         </div>
     </section>
 
@@ -76,8 +79,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Sobre mi  -->
-    <section class="container mt-5" id="sobre">
-  <div class="row align-items-center g-4">
+    <section class="container mt-2" id="sobre">
+    <div class="row align-items-center g-4">
     
     <!-- Texto principal -->
     <div class="col-lg-7">
@@ -94,6 +97,18 @@
         He participado en proyectos con <span class="text-info fw-semibold">frontend (React/Ionic)</span>,
         <span class="text-info fw-semibold">backend (Python)</span>, bases de datos y seguridad,
         además de documentación y trabajo colaborativo.
+      </p>
+
+      <p class="mb-4">
+        Además, he implementado soluciones de 
+        <span class="text-info fw-semibold">Inteligencia Artificial</span> integradas a proyectos reales,
+        participando en el entrenamiento y despliegue de modelos en la 
+        <span class="text-info fw-semibold">nube</span> para automatización y análisis de datos.
+        Complemento mi perfil con prácticas de 
+        <span class="text-info fw-semibold">ciberseguridad</span> en entornos virtualizados,
+        realizando análisis de <span class="text-info fw-semibold">vulnerabilidades</span> y 
+        <span class="text-info fw-semibold">pruebas de seguridad</span> en laboratorios controlados,
+        fortaleciendo así la protección y robustez de las aplicaciones desarrolladas.
       </p>
 
       <!-- Highlights rápidos -->
@@ -121,6 +136,33 @@
             </p>
           </div>
         </div>
+
+        <div class="col-md-6">
+          <div class="about-card p-3 h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-cloud-check text-info fs-5"></i>
+              <h6 class="mb-0 fw-bold">Modelo IA & Cloud</h6>
+            </div>
+            <p class="mb-0 small text-white-50">
+              Implementación de modelo de Inteligencia Artificial entrenado y desplegado en la nube,
+              con integración segura, escalabilidad y procesamiento en tiempo real.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="about-card p-3 h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-shield-lock-fill text-info fs-5"></i>
+              <h6 class="mb-0 fw-bold">Pentesting & Seguridad</h6>
+            </div>
+            <p class="mb-0 small text-white-50">
+              Prácticas de análisis de vulnerabilidades y pruebas de penetración en entornos virtualizados,
+              simulando escenarios de ataque en laboratorios controlados para fortalecer la seguridad,
+              protección y robustez de aplicaciones y sistemas.
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- CTA -->
@@ -138,7 +180,6 @@
     <div class="col-lg-5">
       <div class="about-panel p-4">
         <h5 class="fw-bold mb-3">En qué destaco</h5>
-
         <ul class="list-unstyled mb-4">
           <li class="d-flex gap-2 mb-2">
             <i class="bi bi-check-circle-fill text-info"></i>
@@ -146,15 +187,19 @@
           </li>
           <li class="d-flex gap-2 mb-2">
             <i class="bi bi-check-circle-fill text-info"></i>
-            <span>Documentación técnica y funcional</span>
+            <span>Implementación de Inteligencia Artificial en proyectos reales</span>
           </li>
           <li class="d-flex gap-2 mb-2">
             <i class="bi bi-check-circle-fill text-info"></i>
-            <span>UX/UI y enfoque en usabilidad</span>
+            <span>Cloud, BaaS y despliegue de aplicaciones escalables</span>
+          </li>
+          <li class="d-flex gap-2 mb-2">
+            <i class="bi bi-check-circle-fill text-info"></i>
+            <span>Pruebas de seguridad y análisis de vulnerabilidades</span>
           </li>
           <li class="d-flex gap-2">
             <i class="bi bi-check-circle-fill text-info"></i>
-            <span>Integración con APIs y dashboards</span>
+            <span>Integración de APIs y dashboards interactivos</span>
           </li>
         </ul>
 
@@ -229,6 +274,22 @@
           </span>
           <span class="badge tech-badge d-flex align-items-center gap-2">
             <i class="bi bi-shield-lock-fill"></i> Row Level Security (RLS)
+          </span>
+        </div>
+
+        <h6 class="fw-bold mb-2 mt-4">Ciberseguridad & Entornos de Prueba</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge tech-badge d-flex align-items-center gap-2">
+            <i class="bi bi-pc-display"></i> VirtualBox
+          </span>
+          <span class="badge tech-badge d-flex align-items-center gap-2">
+            <i class="bi bi-hdd-network"></i> VMware
+          </span>
+          <span class="badge tech-badge d-flex align-items-center gap-2">
+            <i class="bi bi-shield-lock-fill"></i> Kali Linux
+          </span>
+          <span class="badge tech-badge d-flex align-items-center gap-2">
+            <i class="bi bi-bug-fill"></i> Metasploit
           </span>
         </div>
 
